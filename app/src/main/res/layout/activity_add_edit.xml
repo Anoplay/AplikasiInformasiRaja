@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/royal_dark_blue"
+    android:fillViewport="true"
+    tools:context=".AddEditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Bagian Pencarian Online -->
+        <TextView
+            android:id="@+id/tv_search_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari Data Raja Online"
+            android:textColor="@color/gold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_search_online"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edit_text_background_dark"
+            android:hint="Ketik nama raja..."
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/off_white"
+            android:textColorHint="@color/light_gray_text"
+            app:layout_constraintEnd_toStartOf="@+id/btn_search_online"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_search_title" />
+
+        <ImageButton
+            android:id="@+id/btn_search_online"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/gold"
+            android:src="@android:drawable/ic_menu_search"
+            app:layout_constraintBottom_toBottomOf="@id/et_search_online"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/et_search_online"
+            app:tint="@color/royal_dark_blue" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/royal_blue"
+            app:layout_constraintTop_toBottomOf="@id/et_search_online"/>
+
+        <!-- Form Input Data -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_add_edit_raja"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/royal_blue"
+            android:padding="2dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_add_crown"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            app:strokeColor="@color/gold"
+            app:strokeWidth="2dp"
+            app:tint="@color/soft_gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <Button
+            android:id="@+id/btn_pilih_gambar"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Pilih Gambar"
+            android:textColor="@color/soft_gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_add_edit_raja" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nama"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Nama Raja"
+            android:textColorHint="@color/light_gray_text"
+            app:boxStrokeColor="@color/gold"
+            app:hintTextColor="@color/gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_pilih_gambar">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_nama_raja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/off_white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_periode"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Gelar / Periode"
+            android:textColorHint="@color/light_gray_text"
+            app:boxStrokeColor="@color/gold"
+            app:hintTextColor="@color/gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_nama">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_periode_raja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/off_white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_deskripsi"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Deskripsi"
+            android:textColorHint="@color/light_gray_text"
+            app:boxStrokeColor="@color/gold"
+            app:hintTextColor="@color/gold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_periode">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_deskripsi_raja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:textColor="@color/off_white" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_simpan"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/gold"
+            android:text="Simpan"
+            android:textColor="@color/royal_dark_blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/til_deskripsi" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

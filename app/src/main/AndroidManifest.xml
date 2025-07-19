@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Izin yang sudah ada -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_add_crown"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_add_crown"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AplikasiInformasiRaja"
+        tools:targetApi="31">
+
+        <!-- Activity utama yang akan dijalankan saat aplikasi dibuka -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Deklarasi untuk Activity lainnya -->
+        <activity android:name=".MainActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".AddEditActivity" />
+        <activity
+            android:name=".SearchResultActivity"
+            android:parentActivityName=".AddEditActivity" />
+
+    </application>
+</manifest>

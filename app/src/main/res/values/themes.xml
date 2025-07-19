@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.AplikasiInformasiRaja" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/royal_blue</item>
+        <item name="android:statusBarColor">@color/royal_dark_blue</item>
+        <item name="android:windowBackground">@color/royal_dark_blue</item>
+        <item name="android:textColor">@color/off_white</item>
+    </style>
+    <style name="Theme.AplikasiInformasiRaja" parent="Base.Theme.AplikasiInformasiRaja" />
+    <style name="RoyalPopupMenu" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/royal_blue</item>
+        <item name="android:textColor">@color/off_white</item>
+    </style>
+    <style name="RoyalToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorSecondary">@color/gold</item>
+    </style>
+</resources>
